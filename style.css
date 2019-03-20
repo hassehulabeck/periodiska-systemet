@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    margin-top: 1.75vh;
+}
+
+section#first {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-auto-flow: row;
+}
+
+section#second,
+section#third {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-auto-flow: row;
+}
+
+main div {
+    text-align: right;
+    border: thin solid gray;
+    margin: 2px;
+    padding: 6px;
+    width: 3vw;
+    height: 6vh;
+}
+
+main div:hover {
+    box-shadow: 1px 1px 150px gold, 1px -1px 50px red, -1px 1px 100px greenyellow, -1px -1px 200px purple;
+}
+
+main div span {
+    position: relative;
+    bottom: -40%;
+    left: -50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    font-size: 1.25em;
+}
+
+sup {
+    position: relative;
+    left: 50%;
+    top: -10%;
+    font-size: 1.1em;
+}
+
+section#first div:first-child {
+    grid-column-start: 1
+}
+
+section#first div:nth-child(2) {
+    grid-column-start: 18
+}
+
+section#first div:nth-child(5),
+section#first div:nth-child(13) {
+    grid-column-start: 13
+}
+
+section#second div:first-child,
+section#third div:first-child {
+    grid-column-start: 4;
+}
+
+
+/* Grupper */
+
+div {
+    background-color: pink;
+}
+
+
+/* Grupp 1 */
+
+#first div:first-child,
+#first div:nth-child(n+6):nth-child(-n+9),
+#first div:nth-child(n+15):nth-child(-n+17),
+#first div:nth-child(n+34):nth-child(-n+35),
+#first div:nth-child(53) {
+    background-color: yellow;
+}
+
+
+/* Grupp 2 */
+
+#first div:nth-child(8n+2):nth-child(-n+18),
+#first div:nth-child(18n+36):nth-child(-n+54),
+#first div:nth-child(72) {
+    background-color: lightcyan;
+}
+
+
+/* Grupp 3 */
+
+#first div:nth-child(8n+3):nth-child(-n+11),
+#first div:nth-child(18n+19):nth-child(-n+55),
+#first div:nth-child(73) {
+    background-color: lightcoral;
+}
+
+
+/* Grupp 4 */
+
+#first div:nth-child(8n+4):nth-child(-n+12),
+#first div:nth-child(18n+20):nth-child(-n+56),
+#first div:nth-child(74) {
+    background-color: sandybrown;
+}
+
+
+/* Grupp 5 */
+
+#first div:nth-child(5),
+#first div:nth-child(19n+14):nth-child(-n+52),
+#first div:nth-child(19n+32):nth-child(-n+51),
+#first div:nth-child(71) {
+    background-color: olive;
+    color: #eee;
+}
+
+
+/* Grupp 7 */
+
+#first div:nth-child(n+81):nth-child(-n+91) {
+    background-color: silver;
+}
+
+
+/* Grupp 6 */
+
+#first div:nth-child(13),
+#first div:nth-child(n+30):nth-child(-n+31),
+#first div:nth-child(n+48):nth-child(-n+50),
+#first div:nth-child(n+66):nth-child(-n+70),
+#first div:nth-child(n+84):nth-child(-n+84) {
+    background-color: darkgray;
+}
+
+
+/* Raden ovan med 84 två gånger är för att övertrumfa regeln för grupp 7 */
+
+
+/* Första "utökningen" */
+
+#first div:nth-child(57),
+#second div {
+    background-color: darkmagenta;
+    color: #eee;
+}
+
+
+/* Andra "utökningen" */
+
+#first div:nth-child(75),
+#third div {
+    background-color: fuchsia;
+}
